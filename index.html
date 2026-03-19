@@ -5,15 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Peekaboo Optical</title>
     <link rel="stylesheet" href="css/styles.css">
-</head>
-<body>
+  </head>
+  <body>
+  <nav class="navbar">
+      <ul>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="sensory_room.html">Sensory room</a></li>
+          <li><a href="#contact">Contact Us</a></li>
+      </ul>
+  </nav>
     <header>
         <h1>Welcome to Peekaboo Optical</h1>
         <p>Your vision is our passion!</p>
         <img src="resources/Gemini_Generated_Image_2muelv2muelv2mue.png" />
     </header>
+    
+
     <main>
-        <section class="services">
+        <section id="services" class="services">
             <h2>Our Services</h2>
             <ul>
                 <li>Eye Exams</li>
@@ -22,11 +32,11 @@
                 <li>Vision Therapy</li>
             </ul>
         </section>
-        <section class="about">
+        <section id="about" class="about">
             <h2>About Us</h2>
             <p>At Peekaboo Optical, we provide exceptional care and quality eyewear. Our team of professionals is here to assist you with all your optical needs.</p>
         </section>
-        <section class="contact">
+        <section id="contact" class="contact">
             <h2>Contact Us</h2>
             <form id="contactForm">
                 <input type="text" id="name" placeholder="Your Name" required>
@@ -36,9 +46,11 @@
             </form>
         </section>
     </main>
+    
     <footer>
         <p>&copy; 2026 Peekaboo Optical. All rights reserved.</p>
     </footer>
+    
     <script src="js/script.js"></script>
 </body>
 </html>

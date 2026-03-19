@@ -1,3 +1,5 @@
+/* Existing styles */
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -17,6 +19,35 @@ h1 {
 
 h2 {
     color: #6a0572;
+}
+
+.navbar {
+    position: sticky;
+    top: 0;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 1rem 0;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.navbar ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+}
+
+.navbar li {
+    margin: 0 15px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #6a0572;
+    font-weight: bold;
+}
+
+.navbar a:hover {
+    color: #9d5b8b;
 }
 
 main {
@@ -61,4 +92,64 @@ footer {
     padding: 1rem;
     background-color: #6a0572;
     color: white;
+}
+
+/*####################################################################*/
+
+.sensory-room {
+    background-color: rgba(255, 255, 255, 0.9);
+    text-align: center;
+    padding: 2rem;
+    margin: 2rem 0;
+    border-radius: 10px;
+}
+
+.images {
+    text-align: center;
+    margin: 2rem 0;
+}
+
+.image-gallery {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.image-gallery img {
+    width: 300px; /* Adjust size as needed */
+    height: auto;
+    margin: 10px;
+    border-radius: 10px;
+}
+
+
+.images {
+    text-align: center;
+    margin: 2rem 0;
+}
+
+.image-gallery-center {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+
+.main-image {
+    width: 400px; /* Adjust size as needed */
+    height: auto;
+    margin: 10px;
+    border-radius: 10px;
+}
+
+.image-gallery {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.image-gallery img {
+    width: 300px; /* Adjust size as needed */
+    height: auto;
+    margin: 10px;
+    border-radius: 10px;
 }

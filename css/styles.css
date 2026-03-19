@@ -1,0 +1,64 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to right, #ffafbd, #ffc3a0, #b9fbc0, #a0c4ff, #bdb2ff);
+    color: #333;
+}
+
+header {
+    text-align: center;
+    padding: 2rem;
+}
+
+h1 {
+    font-size: 2.5rem;
+}
+
+h2 {
+    color: #6a0572;
+}
+
+main {
+    padding: 2rem;
+}
+
+.services, .about, .contact {
+    margin: 2rem 0;
+    padding: 1.5rem;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 0.75rem;
+    margin: 0.5rem 0;
+    border: 2px solid #6a0572;
+    border-radius: 5px;
+}
+
+button {
+    background-color: #6a0572;
+    color: white;
+    padding: 0.75rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #9d5b8b;
+}
+
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #6a0572;
+    color: white;
+}

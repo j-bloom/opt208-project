@@ -153,3 +153,21 @@ footer {
     margin: 10px;
     border-radius: 10px;
 }
+
+.image-gallery {
+    text-align: center;
+    margin: 2rem 0;
+}
+
+.gallery {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.gallery img {
+    width: 150px; /* Adjust size as needed */
+    height: auto;
+    margin: 10px;
+    border-radius: 10px;
+}

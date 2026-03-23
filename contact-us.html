@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="sensory_room.html">Sensory room</a></li>
+            <li><a href="meet-the-team.html">Meet the Team</a></li>
+            <li><a href="contact-us.html">Contact Us</a></li>
+        </ul>
+    </nav>
+    
+    <header>
+        <h1>Contact Us</h1>
+    </header>
+
+    <div class="contact-card">
+        <h2>Find Us</h2>
+        <iframe
+        class="map-embed"
+        src="https://www.google.com/maps?q=1650+Elgin+Mills+Road&output=embed"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+
+      <!-- Call Us -->  
+       <div class="contact-card call-us">    
+        <h2>Call Us</h2>    
+        <p><strong>Phone:</strong> 416-pek-aboo</p>    
+        <p><strong>Hours:</strong> Mon–Fri 9:00 AM – 5:00 PM (by appointment)</p>    
+        <p>If you need help scheduling or have questions about our sensory room, give us a call.</p>  
+    </div>
+
+    <div class="contact-card contact-form" style="grid-column: 1 / -1;">
+        <h2>Send Us a Message</h2>
+        <form id="contactFormLocal">
+        <label for="name"><strong>Name</strong></label>
+        <input type="text" id="name" name="name" placeholder="Your name" required>
+
+        <label for="email"><strong>Email</strong></label>
+        <input type="email" id="email" name="email" placeholder="you@example.com" required>
+
+        <label for="message"><strong>Message</strong></label>
+        <textarea id="message" name="message" rows="5" placeholder="How can we help?" required></textarea>
+
+        <button type="submit">Send Message</button>
+        </form>
+    </div>
+    </div>
+    <footer>
+        <p>&copy; 2026 Peekaboo Vision. All rights reserved.</p>
+    </footer>
+    <script src="js/script.js"></script>
+</body>
+</html>

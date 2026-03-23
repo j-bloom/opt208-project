@@ -239,8 +239,8 @@ footer {
 }
 
 .card .card-content img {
-    width: 120px;
-    max-width: 35%;
+    width: 240px;
+    max-width: 70%;
     object-fit: cover;
     border-radius: 8px;
     display: block;
@@ -411,4 +411,99 @@ footer {
 
 .timeline-item.right .card .card-content {
     flex-direction: row-reverse;
+}
+
+
+
+/**************************************************************************************/
+/*CONTACT US*/
+
+.map-embed {
+    min-height: 240px;
+}
+
+.contact-page header {
+text-align: center;
+padding: 2rem 1rem;
+}
+
+.contact-container {
+max-width: 1100px;
+margin: 0 auto 2rem;
+padding: 0 1rem;
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 1.25rem;
+align-items: start;
+}
+
+.contact-card {
+background: rgba(255,255,255,0.9);
+padding: 1.25rem;
+border-radius: 10px;
+box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+}
+
+.contact-card h2 {
+margin-top: 0;
+color: #6a0572;
+}
+
+.contact-details p {
+margin: 0.5rem 0;
+color: #333;
+}
+
+.map-embed {
+width: 100%;
+height: 320px;
+border: 0;
+border-radius: 8px;
+}
+
+.contact-form input,
+.contact-form textarea,
+.contact-form button {
+width: 100%;
+padding: 0.75rem;
+margin: 0.5rem 0;
+border: 2px solid #6a0572;
+border-radius: 6px;
+box-sizing: border-box;
+font-size: 1rem;
+}
+
+.contact-form button {
+background-color: #6a0572;
+color: #fff;
+border: none;
+cursor: pointer;
+}
+
+.contact-form button:hover {
+background-color: #9d5b8b;
+}
+
+/* Make navbar and footer full-width like other pages (existing rules may already cover this) */
+.navbar {
+position: sticky;
+top: 0;
+background-color: rgba(255,255,255,0.95);
+padding: 1rem 0;
+box-shadow: 0 4px 6px rgba(0,0,0,0.08);
+}
+
+footer {
+text-align: center;
+padding: 1rem;
+background-color: #6a0572;
+color: white;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+.contact-container {
+grid-template-columns: 1fr;
+}
+
 }

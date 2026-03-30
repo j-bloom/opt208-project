@@ -225,18 +225,28 @@ footer {
     height: auto;
     margin: 10px;
     border-radius: 10px;
-}
-
-.image-gallery {
     text-align: center;
-    margin: 2rem 0;
 }
 
+/* Uniform sizing for brand logos */
+.gallery img {
+    height: 100px; /* Adjust this number to your preferred size */
+    width: auto;   /* Maintains aspect ratio so they don't look stretched */
+    object-fit: contain; /* Ensures the logo fits perfectly in the box */
+    margin: 15px;  /* Adds breathing room between logos */
+    transition: transform 0.3   s ease; /* Smooth hover effect */
+    transform: scale(1.1);
+}
+
+
+/* Ensure the gallery centers them nicely */
 .gallery {
     display: flex;
     justify-content: center;
+    align-items: center;
     flex-wrap: wrap;
 }
+
 
 .gallery img {
     width: 150px; /* Adjust size as needed */

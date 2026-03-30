@@ -3,8 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Contact Us | Peekaboo Vision</title>
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DynaPuff:wght@400..700&family=Schoolbell&display=swap" rel="stylesheet">
+    <style>
+        /* This ensures the content stays at 75% width and centered */
+        .content-wrapper {
+            width: 75vw;
+            margin: 0 auto;
+        }
+
+        /* Ensures the map takes up the full 75% container width */
+        .map-embed {
+            width: 100%;
+            height: 450px;
+            border: 0;
+            border-radius: 10px;
+        }
+
+        /* Specifically adds space below the message section */
+        .contact-form {
+            margin-bottom: 30px;
+        }
+    </style>
 </head>
 <body>
     <nav class="navbar">
@@ -15,45 +38,49 @@
             <li><a href="contact-us.html">Contact Us</a></li>
         </ul>
     </nav>
-    
-    <header>
-        <h1>Contact Us</h1>
-    </header>
 
-    <div class="contact-card">
-        <h2>Find Us</h2>
-        <iframe
-        class="map-embed"
-        src="https://www.google.com/maps?q=1650+Elgin+Mills+Road&output=embed"
-        allowfullscreen=""
-        loading="lazy"
-        referrerpolicy="no-referrer-when-downgrade"></iframe>
-    </div>
+    <!-- Wrapper starts here -->
+    <div class="content-wrapper">
+        <header>
+            <h1>Contact Us</h1>
+        </header>
 
-      <!-- Call Us -->  
-       <div class="contact-card call-us">    
-        <h2>Call Us</h2>    
-        <p><strong>Phone:</strong> 416-pek-aboo</p>    
-        <p><strong>Hours:</strong> Mon–Fri 9:00 AM – 5:00 PM (by appointment)</p>    
-        <p>If you need help scheduling or have questions about our sensory room, give us a call.</p>  
-    </div>
+        <div class="contact-card">
+            <h2>Find Us</h2>
+            <iframe
+                class="map-embed"
+                src="https://www.google.com/maps?q=1650+Elgin+Mills+Road&output=embed"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+        </div>
 
-    <div class="contact-card contact-form" style="grid-column: 1 / -1;">
-        <h2>Send Us a Message</h2>
-        <form id="contactFormLocal">
-        <label for="name"><strong>Name</strong></label>
-        <input type="text" id="name" name="name" placeholder="Your name" required>
+        <!-- Call Us -->
+        <div class="contact-card call-us">
+            <h2>Call Us</h2>
+            <p><strong>Phone:</strong> 416-pek-aboo</p>
+            <p><strong>Hours:</strong> Mon–Fri 9:00 AM – 5:00 PM (by appointment)</p>
+            <p>If you need help scheduling or have questions about our sensory room, give us a call.</p>
+        </div>
 
-        <label for="email"><strong>Email</strong></label>
-        <input type="email" id="email" name="email" placeholder="you@example.com" required>
+        <div class="contact-card contact-form">
+            <h2>Send Us a Message</h2>
+            <form id="contactFormLocal">
+                <label for="name"><strong>Name</strong></label>
+                <input type="text" id="name" name="name" placeholder="Your name" required>
 
-        <label for="message"><strong>Message</strong></label>
-        <textarea id="message" name="message" rows="5" placeholder="How can we help?" required></textarea>
+                <label for="email"><strong>Email</strong></label>
+                <input type="email" id="email" name="email" placeholder="you@example.com" required>
 
-        <button type="submit">Send Message</button>
-        </form>
-    </div>
-    </div>
+                <label for="message"><strong>Message</strong></label>
+                <textarea id="message" name="message" rows="5" placeholder="How can we help?" required></textarea>
+
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+    </div> <!-- Wrapper ends here -->
+
     <footer>
         <p>&copy; 2026 Peekaboo Vision. All rights reserved.</p>
     </footer>

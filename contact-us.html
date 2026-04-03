@@ -5,17 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us | Peekaboo Vision</title>
     <link rel="stylesheet" href="css/styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DynaPuff:wght@400..700&family=Schoolbell&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://googleapis.com">
+    <link rel="preconnect" href="https://gstatic.com" crossorigin>
+    <link href="https://googleapis.com/css2?family=DynaPuff:wght@400..700&family=Schoolbell&display=swap" rel="stylesheet">
     <style>
-        /* This ensures the content stays at 75% width and centered */
         .content-wrapper {
             width: 75vw;
             margin: 0 auto;
         }
 
-        /* Ensures the map takes up the full 75% container width */
         .map-embed {
             width: 100%;
             height: 450px;
@@ -23,9 +21,54 @@
             border-radius: 10px;
         }
 
-        /* Specifically adds space below the message section */
         .contact-form {
             margin-bottom: 30px;
+        }
+
+        .book-btn {
+            background-color: #ff6b6b;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-family: 'DynaPuff', sans-serif;
+            margin-top: 10px;
+        }
+
+        /* Modal Styles */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.5);
+        }
+
+        .modal-content {
+            background-color: white;
+            margin: 10% auto;
+            padding: 20px;
+            border-radius: 15px;
+            width: 300px;
+            text-align: center;
+            font-family: 'Schoolbell', cursive;
+        }
+
+        .close-btn {
+            float: right;
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+        .modal-content input {
+            display: block;
+            width: 90%;
+            margin: 10px auto;
+            padding: 8px;
         }
     </style>
 </head>
@@ -39,7 +82,6 @@
         </ul>
     </nav>
 
-    <!-- Wrapper starts here -->
     <div class="content-wrapper">
         <header>
             <h1>Contact Us</h1>
@@ -49,19 +91,37 @@
             <h2>Find Us</h2>
             <iframe
                 class="map-embed"
-                src="https://www.google.com/maps?q=1650+Elgin+Mills+Road&output=embed"
+                src="https://google.com"
                 allowfullscreen=""
                 loading="lazy"
                 referrerpolicy="no-referrer-when-downgrade">
             </iframe>
         </div>
 
-        <!-- Call Us -->
         <div class="contact-card call-us">
             <h2>Call Us</h2>
             <p><strong>Phone:</strong> 416-pek-aboo</p>
             <p><strong>Hours:</strong> Mon–Fri 9:00 AM – 5:00 PM (by appointment)</p>
             <p>If you need help scheduling or have questions about our sensory room, give us a call.</p>
+            <button class="book-btn" onclick="openModal()">Book an Appointment</button>
+        </div>
+
+        <!-- Appointment Modal Popup -->
+        <div id="appointmentModal" class="modal">
+            <div class="modal-content">
+                <span class="close-btn" onclick="closeModal()">&times;</span>
+                <h3>Pick a Time</h3>
+                <form id="bookingForm">
+                    <label for="appt-date">Select Date:</label>
+                    <input type="date" id="appt-date" name="date" required>
+
+                    <label for="appt-time">Select Time:</label>
+                    <!-- min and max provide visual hints in some browsers -->
+                    <input type="time" id="appt-time" name="time" min="09:00" max="17:00" required>
+
+                    <button type="submit" class="book-btn">Confirm Booking</button>
+                </form>
+            </div>
         </div>
 
         <div class="contact-card contact-form">
@@ -79,11 +139,46 @@
                 <button type="submit">Send Message</button>
             </form>
         </div>
-    </div> <!-- Wrapper ends here -->
+    </div>
 
     <footer>
         <p>&copy; 2026 Peekaboo Vision. All rights reserved.</p>
     </footer>
+
+    <script>
+        const modal = document.getElementById("appointmentModal");
+
+        function openModal() {
+            modal.style.display = "block";
+        }
+
+        function closeModal() {
+            modal.style.display = "none";
+        }
+
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                closeModal();
+            }
+        }
+
+        // Logic to block times outside of 9AM - 5PM
+        document.getElementById('bookingForm').onsubmit = function(e) {
+            e.preventDefault();
+
+            const selectedTime = document.getElementById('appt-time').value;
+            const hour = parseInt(selectedTime.split(':')[0]);
+
+            // Check if time is before 9 (09:00) or 5 PM (17:00)
+            // Note: 17:01 would be outside, so we check if it's 17 or higher
+            if (hour < 9 || hour >= 17) {
+                alert("Sorry, we are closed during this time. Please select a time between 9:00 AM and 5:00 PM.");
+            } else {
+                alert("Thank you! Your appointment request for " + selectedTime + " has been sent.");
+                closeModal();
+            }
+        };
+    </script>
     <script src="js/script.js"></script>
 </body>
 </html>
